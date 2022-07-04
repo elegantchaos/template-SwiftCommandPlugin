@@ -12,6 +12,7 @@ let package = Package(
     platforms: [
         .macOS(.v12)
     ],
+    
     products: [
         .plugin(
             name: "xXxprojectxXx",
@@ -28,17 +29,19 @@ let package = Package(
         .plugin(
             name: "xXxprojectxXx",
             
-            capability: .command(intent: .custom(verb: "command", description: "command description")),
+            capability: .command(
+                intent: .custom(
+                    verb: "command",
+                    description: "command description"
+                ),
+                
+                permissions: [
+                    .writeToPackageDirectory(reason: "write reason")
+                ]
+            ),
             
             dependencies: [
-                "xXxprojectxXxTool"
             ]
-        ),
-        
-        .executableTarget(
-            name: "xXxprojectxXxTool",
-            dependencies: [
-                ]
         ),
     ]
 )
