@@ -14,9 +14,9 @@ let package = Package(
     ],
     products: [
         .plugin(
-            name: "xXxprojectxXxPlugin",
+            name: "xXxprojectxXx",
             targets: [
-                "xXxprojectxXxPlugin"
+                "xXxprojectxXx"
             ]
         ),
     ],
@@ -26,7 +26,7 @@ let package = Package(
     
     targets: [
         .plugin(
-            name: "xXxprojectxXxPlugin",
+            name: "xXxprojectxXx",
             
             capability: .command(intent: .custom(verb: "command", description: "command description")),
             
@@ -36,7 +36,7 @@ let package = Package(
         ),
         
         .executableTarget(
-            name: "xXxprojectxXxTestsTool",
+            name: "xXxprojectxXxTool",
             dependencies: [
                 ]
         ),
